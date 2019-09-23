@@ -4,15 +4,14 @@ Backend is basic node.js and should likely be managed by PM2.
 Frontend is ReactJS.
 
 ## Features
-- Shows basic stats for all running apps (name, version, status, restarts, uptime, memory load, cpu load)
+- Shows basic stats for all running apps (name, version, status, restarts, uptime, memory load, cpu load) ![main](repo_images/pm2_monit_main.jpg)
 - Displays logs and error logs
+![logs](repo_images/pm2_monit_logs.jpg)
 - Start / stop any process
+![reload](repo_images/pm2_monit_reload.jpg)
 - Reload any process or all at once
 - Basic login example included
 
-![main](repo_images/pm2_monit_main.jpg)
-![logs](repo_images/pm2_monit_logs.jpg)
-![reload](repo_images/pm2_monit_reload.jpg)
 
 ## Installation
 Clone this repo then run `install.sh` from bash
@@ -23,6 +22,9 @@ And run the react app by cd into client/ then `npx react-scripts start`.
 
 ## Notes
 Only tested on CentOS 7
+
+`.env` files need to have certain parameters. Make sure to check `.env.default` in both server/ and client/ directories. 
+It's important the the client's `ENDPOINT` parameter points to the server app!
 
 ## Contributing
 Please do! Currently looking to improve the log reporting process so that the entire log isn't sent every cycle. Would also be nice to implement some generics for metrics for the app's DetailView.
