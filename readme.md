@@ -15,7 +15,11 @@ Frontend is ReactJS.
 ![reload](repo_images/pm2_monit_reload.jpg)
 
 ## Installation
-Clone this repo then run `install` from bash
+Clone this repo then run `install.sh` from bash
+Edit `server/.env` and `client/.env` as needed for your environment
+Run with `run-dev.sh`. Ctrl+C should kill both the react app and the server, but if the server doesn't die then its pid should be in `server.pid`.
+Or run the server by cd into server/ then `npm start` (or `pm2 start server.js --name="PM2_Monitor" --watch` :smiley_cat:)
+And run the react app by cd into client/ then `npx react-scripts start`.
 
 ## Notes
 Only tested on CentOS 7
