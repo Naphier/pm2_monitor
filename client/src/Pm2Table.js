@@ -109,22 +109,22 @@ export default class Pm2Table extends Component {
                 header = ''
             }
             else if (key === 'restart'){
-                header = <img src={refresh} title='Restarts' />
+                header = <img src={refresh} title='Restarts' alt='restarts'/>
             }
             else if (key === 'uptime_ms'){
-                header = <img src={clock} title='Uptime' />
+                header = <img src={clock} title='Uptime' alt='uptime'/>
             }
             else if (key === 'cpu') {
-                header = <img src={processor} title='CPU' />
+                header = <img src={processor} title='CPU' alt='cpu'/>
             } 
             else if (key === 'watching'){
-                header = <img src={eyeWhite} title='Watching' />
+                header = <img src={eyeWhite} title='Watching' alt='watching'/>
             }
             else if (key === 'status'){
-                header = <img src={powerWhite} title='Status' />
+                header = <img src={powerWhite} title='Status' alt='status'/>
             } 
             else if (key === 'mem'){
-                header = <img src={ram} title='Memory' />
+                header = <img src={ram} title='Memory' alt='memory'/>
             }
 
             if (!this.hideableColIds.includes(key+'-col') && 
@@ -197,9 +197,9 @@ const RenderRow = (props) => {
         }
         else if (key === 'status'){
             var titleTxt = data + ' click to '
-            var img = <img src={powerRed} title={titleTxt + 'reload ' + processName}></img>
+            var img = <img src={powerRed} title={titleTxt + 'reload ' + processName} alt='status'></img>
             if (data === 'online')
-                img = <img src={powerGreen} title={titleTxt + 'stop ' + processName}></img>
+                img = <img src={powerGreen} title={titleTxt + 'stop ' + processName} alt='status'></img>
 
             return  <td key={ tdKey } id={tdId} onClick={
                             () => {props.onStopStartClicked(processName)}}>
@@ -229,10 +229,10 @@ const RenderRow = (props) => {
         else if (key === 'watching'){
             var inner = null
             if (props.data[key]){
-                inner = <img src={eyeGreen} title={'watching enabled' + processName} />
+                inner = <img src={eyeGreen} title={'watching enabled' + processName} alt='watching'/>
             }
             else {
-                inner = <img src={slashedEye} title={'watching disabled on ' + processName}/>
+                inner = <img src={slashedEye} title={'watching disabled on ' + processName} alt='watching'/>
             }
             return  <td key={ tdKey } id={tdId}>
                         { inner }
@@ -248,9 +248,9 @@ const RenderRow = (props) => {
                         props.onReloadClicked(processName)
                     data.action()
                 }
-                buttonLabel = <img src={refresh} title={'reload ' + processName}/>
+                buttonLabel = <img src={refresh} title={'reload ' + processName} alt='reload'/>
             } else if (buttonLabel === 'logs'){
-                buttonLabel = <img src={logWhite} title={processName + ' logs'}/>
+                buttonLabel = <img src={logWhite} title={processName + ' logs'} alt='logs'/>
             }
 
             return  <td key={ tdKey } id={tdId}>

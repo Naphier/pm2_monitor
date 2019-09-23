@@ -320,6 +320,12 @@ loginHandler = (socket, credsIn) =>{
 }
 
 const stopAppHandler = (socket, process) =>{
+    var response = {
+        processName: processName,
+        errorLog: '',
+        log: '',
+        error: ''
+    }
     getPm2List(
         (processes) => {
             var found = false
