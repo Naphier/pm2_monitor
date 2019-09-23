@@ -1,0 +1,49 @@
+/* body defined in index.html to prevent flash on load */
+
+footer {
+  text-align: center;
+  font-size: 0.75em;
+}
+
+#icon-credit {
+  font-size: 0.75em;
+  color: rgb(56, 68, 110);
+}
+
+#icon-credit a {
+  text-decoration: none;
+  color: rgb(56, 68, 110);
+}
+
+#icon-credit a:visited {
+  text-decoration: none;
+  color: rgb(56, 68, 110);
+}
+
+button {
+  cursor: pointer;
+}
+
+#loading {
+  width: 100%;
+  text-align: center
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 100ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-done {
+  opacity: 0;
+  transition: opacity 100ms ease-in;
+}
+

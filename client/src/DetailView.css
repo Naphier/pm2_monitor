@@ -1,0 +1,43 @@
+#detail-view {
+    width: 250px;
+    position: fixed;
+    top: 10px;
+    left: calc(50% - 125px);
+    background-color: #1e0f2d;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 5px 5px #0c0f1a;
+}
+
+#detail-view button {
+    position: absolute;
+    top: 0;
+    right: -4px;
+    padding: 2px 8px;   
+}
+
+#detail-view h1 {
+    display: inline-block;
+    margin: 0;
+    font-size: 1.5em;
+    width: calc(100% - 16px);
+    margin-top: -10px;
+}
+
+#detail-view ul {
+    padding-inline-start: 25px;
+}
+
+#detail-view li {
+    list-style: none;
+}
+
+.leftSpan {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.rightSpan{
+    float: right;
+    margin-right: 25px;
+}

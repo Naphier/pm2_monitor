@@ -1,0 +1,17 @@
+{
+  "name": "pm2_monitor_server",
+  "version": "0.0.1",
+  "description": "Websocket server for PM2 monitor web interface",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sean Mann",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "pm2": "^3.5.1",
+    "socket.io": "^2.2.0"
+  }
+}

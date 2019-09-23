@@ -1,0 +1,56 @@
+#modal-blocker {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+    top: 0;
+}
+
+#modal-panel {
+    background-color: rgb(51, 23, 80);;
+    box-shadow: 5px 5px #0c0f1a;
+    padding: 4px 10px;
+    margin: 60px auto;
+    width: fit-content;
+    border-radius: 5px;
+}
+
+#modal-panel div {
+    padding: 10px 4px;
+}
+
+#modal-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+div #modal-message {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+#modal-buttons {    
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.modalFade-enter {
+    opacity: 0;
+}
+  
+.modalFade-enter-active {
+    opacity: 1;
+    transition: opacity 100ms ease-in;
+}
+
+.modalFade-exit {
+    opacity: 1;
+}
+
+.modalFade-exit-done {
+    opacity: 0;
+    transition: opacity 100ms ease-in;
+}

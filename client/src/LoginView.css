@@ -1,0 +1,29 @@
+div#login-view {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* align-content: center; */
+    text-align: center;
+}
+
+#login-view h2 {
+    color: red;
+}
+
+form#login-form{
+    margin-top: 100px;
+}
+
+#login-form label {
+    display: block;
+}
+
+#login-form input {
+    background-color: darkgray;
+    border: none;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 3px;
+}
+

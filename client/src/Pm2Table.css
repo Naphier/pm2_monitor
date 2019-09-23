@@ -1,0 +1,79 @@
+:root{
+    --border-color: rgb(43, 20, 66)
+}
+
+#pm2table-div {
+    border-radius: 5px;
+    margin: 40px auto;
+    overflow: hidden;
+    width: fit-content;
+    box-shadow: 1px 4px black;
+}
+
+table {
+    border-collapse: collapse;
+    font-family: monospace;
+    font-size: 1.25em; 
+}
+
+table, th, td {
+    padding: 4px 10px;
+    text-align: center;
+}
+
+th:nth-child(n+4):nth-child(-n+6) {
+    width: 9ch;
+    min-width: 9ch;
+    padding: 0;
+}
+
+th:nth-child(7) {
+    width: 10ch;
+    min-width: 10ch;
+    padding: 0;
+}
+
+th, td {
+    border-right: 1px solid var(--border-color);
+}
+
+td {
+    border-top: 1px solid var(--border-color);
+    background-color: rgb(22, 12, 33);
+}
+
+th {
+    text-transform: capitalize;
+    background-color: rgb(30, 15, 45);
+}
+
+table thead tr th:last-child, table tbody tr td:last-child {
+    border-right: 0;
+}
+
+button {
+    font-size: 100%;
+    font-family: inherit;
+    border: 0;
+    padding: 2px 4px;
+    border-radius: 3px;
+    background-color: rgb(99, 124, 207);
+}
+
+td button {
+    padding: 2px 4px;
+    margin: 0;
+}
+
+td img, th img {
+    width: 20px
+}
+
+#reload-all {
+    width: 100%;
+    text-align: center
+}
+
+#reload-all button {
+    float: none;
+}

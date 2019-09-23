@@ -1,0 +1,44 @@
+#logview-div{
+    background-color: rgb(22, 12, 33);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    min-height: 100%;
+    height: fit-content;
+    text-align: center;
+}
+
+#header-div {
+    position: fixed;
+    width: inherit;
+    background-color: rgb(30, 15, 45);
+    padding: 8px 0;
+    top:0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.Selected {
+    border: 2px solid rgb(167, 167, 167);
+    font-weight: bold;
+    padding: 4px 6px;
+    color: #180d23;
+}
+
+button {
+    float: right;
+    margin: 0px 5px;
+    padding: 6px;
+}
+
+pre {
+    text-align: left;
+    padding: 20px;
+    margin-top: 80px;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
