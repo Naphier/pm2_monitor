@@ -321,7 +321,7 @@ loginHandler = (socket, credsIn) =>{
 
 const stopAppHandler = (socket, process) =>{
     var response = {
-        processName: processName,
+        processName: process,
         errorLog: '',
         log: '',
         error: ''
