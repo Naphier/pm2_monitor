@@ -416,5 +416,6 @@ server.listen(port,
 
         log('='.repeat(startMsg.length))
         log(startMsg)
+        fs.writeFileSync('../server.pid', process.pid)
     }
 )
