@@ -1,2 +1,3 @@
 #!/bin/sh
-echo todo
+npm install --prefix ./server
+npm install --prefix ./client
