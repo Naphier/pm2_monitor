@@ -1,7 +1,7 @@
 # PM2 Monitor
 Simple web interface for monitoring [PM2](http://pm2.keymetrics.io/), a node.js process manager.
 
-Backend is a simple Express server utilizing the pm2's API and should likely be managed by PM2.
+Backend is a simple Express server utilizing the [PM2's API](http://pm2.keymetrics.io/docs/usage/pm2-api/) and should likely be managed by PM2.
 
 Frontend is React and could be anything, but I wanted to learn some React stuff :wink:.
 
