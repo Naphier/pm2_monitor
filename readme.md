@@ -10,9 +10,9 @@ Frontend is ReactJS.
 - Reload any process or all at once
 - Basic login example included
 
-[main](repo_images/pm2_monit_main.jpg)
-[logs](repo_images/pm2_monit_logs.jpg)
-[reload](repo_image/pm2_monit_reload.jpg)
+![main](repo_images/pm2_monit_main.jpg)
+![logs](repo_images/pm2_monit_logs.jpg)
+![reload](repo_image/pm2_monit_reload.jpg)
 
 ## Installation
 Clone this repo then run `install` from bash
