@@ -18,13 +18,16 @@ const app = express()
 
 // Limit connections from other servers.
 app.use((req, res, next) =>{
+    
     var origin = req.headers.origin
     if (allowedOrigins.indexOf(origin) > -1){
         res.setHeader('Access-Control-Allow-Origin', origin)    
     }  
     res.header('Access-Control-Allow-Methods', 'GET, POST');
+    res.header('Access-Control-Allow-Methods', 'privatekey');
     res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     res.header('Access-Control-Allow-Credentials', true);
+    
     return next();
 })
 

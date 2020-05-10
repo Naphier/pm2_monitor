@@ -98,6 +98,10 @@ export default class Pm2Table extends Component {
     }
 
     getKeys = function() {
+        if (!this.props || !this.props.data || !this.props.data[0]){
+            return [];
+        }
+
         return Object.keys(this.props.data[0])
     }
 
@@ -158,19 +162,37 @@ export default class Pm2Table extends Component {
     }
 
     render() {
+        console.log('row data', this.getRowsData());
+
+        var rowData = this.getRowsData();
+        if (!rowData || rowData.length === 0){
+            return (
+                <div>
+                <div id={'pm2table-div'}>
+                    No PM2 processes found. 
+                    Please ensure PM2 is running and managing at least one process.
+                </div>
+                <div id = 'reload-all'>
+                    <button onClick={() => {window.location.reload()}}>
+                        REFRESH
+                    </button>
+                </div>
+                </div>
+            );
+        }
+
         return (
             <div>
-            <div id={'pm2table-div'}>
-                <table>
-                    <thead>
-                        <tr>{ this.getHeader() }</tr>
-                    </thead>
-                    <tbody>
-                        { this.getRowsData() }
-                    </tbody>
-                </table>
-                
-            </div>
+                <div id={'pm2table-div'}>
+                    <table>
+                        <thead>
+                            <tr>{ this.getHeader() }</tr>
+                        </thead>
+                        <tbody>
+                            { rowData }
+                        </tbody>
+                    </table>
+                </div>
                 <div id='reload-all'>
                     <button onClick={() => {this.props.onReloadAllClicked()}}>RELOAD ALL</button>
                 </div>
