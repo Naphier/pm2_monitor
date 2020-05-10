@@ -48,7 +48,7 @@ else if (!package.name) {
     process.exit(1)
 }
 else if (!package.version) {
-    console.error(`Your package.json is missing the 'verision' property...`)
+    console.error(`Your package.json is missing the 'version' property...`)
     process.exit(1)
 }
 
