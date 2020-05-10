@@ -162,8 +162,6 @@ export default class Pm2Table extends Component {
     }
 
     render() {
-        console.log('row data', this.getRowsData());
-
         var rowData = this.getRowsData();
         if (!rowData || rowData.length === 0){
             return (

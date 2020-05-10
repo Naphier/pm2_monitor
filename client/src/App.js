@@ -18,7 +18,7 @@ class App extends Component {
 		// Log in is turned off during development, but you should
 		// turn it on manually to do your testing if needed.
 		this.autoLogin = process.env.NODE_ENV === 'development'
-		//this.autoLogin = false
+		this.autoLogin = false
 		
 		// Log out after 30 minutes of inactivity.
 		this.maxInactivity = 1000 * 60 * 30

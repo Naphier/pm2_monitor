@@ -3,7 +3,7 @@
 */
 
 // Get config and validate.
-const { package, port, node_env, log, credentials } = require('./environment')
+const { package, port, node_env, log } = require('./environment')
 const reporting_interval = process.env.REPORTING_INTERVAL || 5000
 var allowed = process.env.ALLOWED || ''
 const allowedOrigins = allowed.split(' ')
@@ -293,34 +293,10 @@ const logRequestHandler = async (socket, processName) => {
     )
 }
 
-loginHandler = (socket, credsIn) =>{
-    try {
-        var pwOk = false
-        var userOk = false
-        if (credsIn){
-            for (var c of credentials){
-                if (c.user === credsIn.user){
-                    userOk = true
-                    if (c.pwd === credsIn.pwd){
-                        pwOk = true
-                    }
-                    break
-                }
-            }
-        }
-        else {
-            console.error('Null credentials passed')
-        }
+const {LoginManager} = require('./LoginManager')
+//const loginManager = new LoginManager();
 
-        if (!userOk || !pwOk)
-            console.error(`Failed login attempt by user: '${credsIn.user}'`)
-
-        socket.emit('login', {userOk: userOk, pwOk: pwOk})
-    }
-    catch (err){
-        console.error(err)
-    }
-}
+loginHandler = (new LoginManager()).handleLogin;
 
 const stopAppHandler = (socket, process) =>{
     var response = {
