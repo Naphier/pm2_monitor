@@ -1,6 +1,9 @@
 #!/bin/sh
-npm install --prefix ./server
-npm install --prefix ./client
+cd server
+npm install
+cd ../client
+npm install
+cd ..
 cp server/.env.default server/.env
 cp client/.env.default client/.env
 echo Configure server/.env and client/.env as needed then run with 'run-dev.sh'
